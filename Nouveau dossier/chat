@@ -1,0 +1,16 @@
+DROP TABLE IF EXISTS user ;
+CREATE TABLE user (id_login INT AUTO_INCREMENT NOT NULL,
+email_login VARCHAR(255),
+_password_login TEXT,
+pseudo VARCHAR(255),
+PRIMARY KEY (id_login)) ENGINE=InnoDB;
+
+DROP TABLE IF EXISTS message ;
+CREATE TABLE message (id_message INT(11) AUTO_INCREMENT NOT NULL,
+message_message TEXT,
+created_at_message DATETIME,
+user_id_login INT,
+PRIMARY KEY (id_message)) ENGINE=InnoDB;
+
+ALTER TABLE message ADD CONSTRAINT FK_message_user_id_login FOREIGN KEY (user_id_login) REFERENCES user (id_login);
+
