@@ -40,12 +40,12 @@ function chargeMessages(){
                 for(let message of messages){//j'ai un message parmis les messsage
                     // On transforme la date du message en JS car ce que l'on a recu est un text
                     let dateMessage = new Date(message.created_at)
-                    if(message.id= `${$user['id']}`){
+                    // if(message.id= `${$user['id']}`){
                     // On ajoute le contenu avant le contenu actuel de discussion  
-                    discussion.innerHTML +=`<div class="container"><div class="lodahout" style="background-color: black;"><p>  ${message.message}</p><span class="time-right"> ${message.pseudo} à ${dateMessage.toLocaleString()}</span></div></div>`  
+                    discussion.innerHTML +=`<div class="container"><div class="lodahout" style="background-color: blue;"><p>  ${message.message}</p><span class="time-right"> ${message.pseudo} à ${dateMessage.toLocaleString()}</span></div></div>`  
                     // On met à jour le lastId
                     lastId = message.id
-                    }
+                    // }
                     discussion.scrollTo(0, discussion.scrollHeight);//srole automatique vers le bas
                 }
             }else{
