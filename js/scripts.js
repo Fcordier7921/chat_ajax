@@ -12,7 +12,7 @@ window.onload = () => {
     valid.addEventListener("click", ajoutMessage)//ecoute le click sur le bouton
 
     // On charge les nouveaux messages
-    setInterval(chargeMessages, 1000)
+    setInterval(chargeMessages, 1000)//cargera le prmier paramétre tout le 1seconde
 }
 
 /**
@@ -23,12 +23,12 @@ function chargeMessages(){
     let xmlhttp = new XMLHttpRequest()
 
     // On gère la réponse
-    xmlhttp.onreadystatechange = function(){
-        if (this.readyState == 4){
-            if(this.status == 200){
+    xmlhttp.onreadystatechange = function(){//ecouteur d'événement 
+        if (this.readyState == 4){//sit le satus et fini 
+            if(this.status == 200){//Requête traitée avec succès. La réponse dépendra de la méthode de requête utilisée.
                 // On a une réponse
                 // On convertit la réponse en objet JS
-                let messages = JSON.parse(this.response)
+                let messages = JSON.parse(this.response)// analyse une chaîne de caractères JSON et construit la valeur JavaScript ou l'objet décrit par cette chaîne
 
                 // On retourne l'objet
                 messages.reverse()
@@ -36,7 +36,7 @@ function chargeMessages(){
                 // On récupère la div #discussion
                 let discussion = document.querySelector("#discussion")
 
-                for(let message of messages){
+                for(let message of messages){//j'ai un message parmis les messsage
                     // On transforme la date du message en JS
                     let dateMessage = new Date(message.created_at)
 
@@ -48,17 +48,17 @@ function chargeMessages(){
                 }
             }else{
                 // On gère les erreurs
-                let erreur = JSON.parse(this.response)
-                alert(erreur.message)
+                let erreur = JSON.parse(this.response);
+                alert(erreur.message);
             }
         }
     }
 
     // On ouvre la requête
-    xmlhttp.open("GET", "ajax/chargeMessages.php?lastId="+lastId)
+    xmlhttp.open("GET", "ajax/chargeMessages.php?lastId="+lastId);
 
     // On envoie
-    xmlhttp.send()
+    xmlhttp.send();
 }
 
 
