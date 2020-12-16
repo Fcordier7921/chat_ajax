@@ -1,4 +1,0 @@
-RewriteEngine On
-RewriteRule ^([a-zA-Z0-9_]*)$ index.php?controller=$1&action=index [L]
-RewriteRule ^([a-zA-Z0-9_]*)\/([a-zA-Z0-9_]*)$ index.php?controller=$1&action=$2 [L]
-RewriteRule ^([a-zA-Z0-9_]*)\/([a-zA-Z0-9_]*)\/([a-zA-Z0-9]*)$ index.php?controller=$1&action=$2&args=$3 [L]

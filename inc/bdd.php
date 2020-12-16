@@ -32,3 +32,4 @@ catch (Exception $error) {
 	// Attrape une exception
 	echo 'Erreur lors de la connexion à la base de données : '. $error->getMessage();
 }
+

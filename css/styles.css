@@ -1,6 +1,8 @@
 body{
 	overflow: hidden;
 	background-color: rgba(255,255,255,0.1);
+	margin: 0;
+	padding: 0;
 }
 
 #discussion{
@@ -12,3 +14,48 @@ body{
 .saisie{
 	height: 20vh;
 }
+.lodahout {
+	border: 2px solid #dedede;
+	background-color: #f1f1f1;
+	border-radius: 5px;
+	max-width: 40%;
+	padding: 10px;
+	margin: 10px ;
+	overflow: auto;
+	
+  }
+  
+  .darker {
+	border-color: #ccc;
+	background-color: #ddd;
+  }
+  
+  .lodahout::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
+  
+  .lodahout img {
+	float: left;
+	max-width: 60px;
+	width: 100%;
+	margin-right: 20px;
+	border-radius: 50%;
+  }
+  
+  .lodahout img.right {
+	float: right;
+	margin-left: 20px;
+	margin-right:0;
+  }
+  
+  .time-right {
+	float: right;
+	color: #aaa;
+  }
+  
+  .time-left {
+	float: left;
+	color: #999;
+  }

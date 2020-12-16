@@ -1,2 +1,2 @@
 # chat-ajax
- Créer un chat en Ajax de A à Z
+ Créer un chat en Ajax 

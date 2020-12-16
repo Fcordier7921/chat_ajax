@@ -5,10 +5,10 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     // On vérifie si on a reçu un id
     if(isset($_GET['lastId'])){
         // On récupère l'id et on le nettoie
-        $lastId = (int)strip_tags($_GET['lastId']);
+        $lastId = (int)strip_tags($_GET['lastId']);//strip_tags supprime les balise html et php
 
         // On initialise le filtre
-        $filtre = ($lastId > 0) ? " WHERE `messages`.`id` > $lastId" : '';
+        $filtre = ($lastId > 0) ? " WHERE `messages`.`id` > $lastId" : '';// requete sql active que quand laste et supérieur a 0 alors je fais le where si non je ne fais rien
 
         // On se connecte à la base
         require_once('../inc/bdd.php');
@@ -30,6 +30,6 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     }
 }else{
     // Mauvaise méthode
-    http_response_code(405);
+    http_response_code(405);//Méthode de requête non autorisée.
     echo json_encode(['message' => 'Mauvaise méthode']);
 }
