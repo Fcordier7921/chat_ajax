@@ -14,7 +14,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
         require_once('../inc/bdd.php');
 
         // On écrit la requête
-        $sql = 'SELECT `messages`.`id`, `messages`.`message`, `messages`.`created_at`, `users`.`pseudo` FROM `messages` LEFT JOIN `users` ON `messages`.`users_id` = `users`.`id`'.$filtre.' ORDER BY `messages`.`id` DESC LIMIT 5;';
+        $sql = 'SELECT `messages`.`id`, `messages`.`message`, `messages`.`created_at`, `users`.`pseudo`, `users`.`photo` FROM `messages` LEFT JOIN `users` ON `messages`.`users_id` = `users`.`id`'.$filtre.' ORDER BY `messages`.`id` DESC LIMIT 5;';
 
         // On exécute la requête
         $query = $db->query($sql);

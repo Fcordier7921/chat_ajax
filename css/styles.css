@@ -1,6 +1,6 @@
 body{
 	overflow: hidden;
-	background-color: rgba(255,255,255,0.1);
+	background-color: rgb(255,255,255);
 	margin: 0;
 	padding: 0;
 }
@@ -18,12 +18,12 @@ body{
 	border: 2px solid #dedede;
 	background-color: #f1f1f1;
 	border-radius: 5px;
-	max-width: 40%;
 	padding: 10px;
 	margin: 10px ;
 	overflow: auto;
 	
   }
+  
   
   .darker {
 	border-color: #ccc;
@@ -55,7 +55,5 @@ body{
 	color: #aaa;
   }
   
-  .time-left {
-	float: left;
-	color: #999;
-  }
+  
+  
