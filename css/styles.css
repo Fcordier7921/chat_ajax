@@ -1,0 +1,102 @@
+body {
+    overflow: auto;
+    background-image: url(../img/lulu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+#discussion {
+    /*mise en forme de la discition*/
+    height: 78vh;
+    box-shadow: 0 0 5px grey;
+    overflow-y: scroll;
+    background-color: #f0f3bd;
+}
+
+.saisie {
+    /*mise en forme de la saisie*/
+    height: 20vh;
+}
+
+.lodahout {
+    /*mise en forme des champ des message*/
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    overflow: auto;
+}
+
+.lodahout p {
+    font-size: 1.2em;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.lodahout::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.lodahout img {
+    /*mise en forme de l'image des champ de discution*/
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.lodahout img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+}
+
+.time-right {
+    float: right;
+    color: black;
+}
+
+.hello {
+    font-size: 50px;
+    color: white;
+    -webkit-text-stroke: 2px black;
+    text-shadow: black 2px 2px 4px;
+}
+
+#lulu p {
+    margin-left: 1.8rem;
+}
+
+@media screen and (max-width: 1000px) {
+    #discussion {
+        height: 57vh;
+    }
+    #lulu p {
+        font-size: 4rem;
+        margin-left: 7.5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #registration a {
+        margin-top: 10px;
+        margin-left: 0!important;
+        margin-right: 0!important;
+    }
+    .deco {
+        float: inherit!important;
+    }
+    #registration a {
+        float: inherit!important;
+        margin-left: 9px!important;
+    }
+}
