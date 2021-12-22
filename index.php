@@ -76,6 +76,8 @@ include_once('inc/header.php');
             <input class="form-control" type="password" id="pass" name="pass">
         </div>
         <button class="btn btn-primary">Me connecter</button>
+        <a class="btn btn-primary" href="inscription.php">Inscription</a>
+        
     </form>
 </div>
 <?php
